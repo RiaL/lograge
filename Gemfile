@@ -6,4 +6,5 @@ gemspec
 group :test do
   gem 'actionpack'
   gem 'logstash-event'
+  gem 'lines'
 end
