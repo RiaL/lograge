@@ -29,6 +29,7 @@ module Lograge
   # Currently supported formats are>
   #  - :lograge - The custom tense lograge format
   #  - :logstash - JSON formatted as a Logstash Event.
+  #  - :lines - Use the LINES log format
   mattr_accessor :log_format
   self.log_format = :lograge
 
@@ -67,6 +68,13 @@ module Lograge
         require "logstash-event"
       rescue LoadError
         puts "You need to install the logstash-event gem to use the logstash output."
+        raise
+      end
+    when "lines"
+      begin
+        require  "lines"
+      rescue LoadError
+        puts "You need to install the lines gem to use the lines output."
         raise
       end
     end

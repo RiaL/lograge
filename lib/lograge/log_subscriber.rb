@@ -38,6 +38,10 @@ module Lograge
       event.join(" ")
     end
 
+    def process_action_lines(data)
+      Lines.dumper.dump(data)
+    end
+
     def process_action_logstash(data)
       event = LogStash::Event.new("@fields" => data)
       event.to_json
