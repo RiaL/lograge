@@ -1,6 +1,8 @@
 Lograge - Taming Rails' Default Request Logging
 =======
 
+This is just a copy of: https://github.com/zimbatm/lograge
+
 Lograge is an attempt to bring sanity to Rails' noisy and unusable, unparsable
 and, in the context of running multiple processes and servers, unreadable
 default logging output. Rails' default approach to log everything is great
